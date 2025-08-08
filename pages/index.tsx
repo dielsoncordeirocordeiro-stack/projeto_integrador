@@ -13,7 +13,6 @@ export default function Home() {
         if (entry.isIntersecting) {
           entry.target.classList.add("opacity-100", "translate-y-0");
         }
-        
       });
     }, options);
 
@@ -75,8 +74,9 @@ export default function Home() {
             onClick={() => setFlip(!flip)}
           >
             <div
-              className={`relative w-full h-full transition-transform duration-700 ease-in-out transform-style-preserve-3d ${flip ? "rotate-y-180" : ""
-                }`}
+              className={`relative w-full h-full transition-transform duration-700 ease-in-out transform-style-preserve-3d ${
+                flip ? "rotate-y-180" : ""
+              }`}
             >
               {/* Frente do cartão */}
               <div className="absolute w-full h-full backface-hidden bg-white rounded-xl shadow-2xl flex flex-col items-center justify-center p-8">
@@ -98,7 +98,7 @@ export default function Home() {
                   Clique ou toque para explorar um resumo do conteúdo completo.
                 </p>
                 <a
-                  href="/documento.pdf"
+                  href="/documento_do_projeto.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition shadow"
@@ -154,13 +154,14 @@ export default function Home() {
               O vídeo documentário apresenta os bastidores do projeto, entrevistas com especialistas e cidadãos em situação de rua.
             </p>
             <div className="aspect-video w-full rounded overflow-hidden shadow-xl">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/SEU_VIDEO_ID"
-                title="YouTube Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+            <iframe
+  className="w-full h-full"
+  src="https://www.youtube.com/embed/MW9QsltAYIs"
+  title="YouTube Video"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
             </div>
           </div>
         </section>
@@ -178,9 +179,9 @@ export default function Home() {
           <div className="relative z-10">
             <h2 className="text-3xl font-bold mb-4 font-serif">Contato e Créditos</h2>
             <p className="text-lg mb-4">
-              Este site foi desenvolvido como parte do Projeto Integrador sobre moradores de rua.
+              dissh_xz
             </p>
-            <p className="text-sm text-gray-400">© 2025 Seu Nome ou Escola</p>
+            <p className="text-sm text-gray-400">"© Dielson Cordeiro. Todos os direitos reservados.</p>
           </div>
         </section>
       </main>
