@@ -43,10 +43,10 @@ export default function Home() {
     <>
       {/* Google Analytics */}
       <Script
-        async
+        strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-KDRM9X7CLC"
       />
-      <Script id="google-analytics">
+      <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
