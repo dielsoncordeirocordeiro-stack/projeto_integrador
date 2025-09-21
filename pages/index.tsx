@@ -6,17 +6,17 @@ import Script from "next/script";
 
 export default function Home() {
   const [flip, setFlip] = useState(false);
-  const [showModal, setShowModal] = useState(false); // Começa escondido
+  const [showModal, setShowModal] = useState(false);
 
-  // Aparecer após 40 segundos
+  // Mostrar modal após 40 segundos
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowModal(true);
     }, 4000); // 40 segundos
-
     return () => clearTimeout(timer);
   }, []);
 
+  // Animação das seções ao aparecer
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const options = { threshold: 0.1 };
@@ -90,7 +90,7 @@ export default function Home() {
         </div>
       )}
 
-      {/* Botão bolinha para reabrir modal */}
+      {/* Botão para reabrir modal */}
       {!showModal && (
         <button
           onClick={() => setShowModal(true)}
@@ -113,7 +113,7 @@ export default function Home() {
       </header>
 
       <main className="scroll-smooth pt-5">
-        {/* Seção introdução */}
+        {/* Seção Introdução */}
         <section
           id="introducao"
           className="relative h-screen bg-cover bg-center text-white flex items-center justify-center px-4"
@@ -146,8 +146,9 @@ export default function Home() {
             onClick={() => setFlip(!flip)}
           >
             <div
-              className={`relative w-full h-full transition-transform duration-700 ease-in-out transform-style-preserve-3d ${flip ? "rotate-y-180" : ""
-                }`}
+              className={`relative w-full h-full transition-transform duration-700 ease-in-out transform-style-preserve-3d ${
+                flip ? "rotate-y-180" : ""
+              }`}
             >
               {/* Frente */}
               <div className="absolute w-full h-full backface-hidden bg-white rounded-xl shadow-2xl flex flex-col items-center justify-center p-8">
